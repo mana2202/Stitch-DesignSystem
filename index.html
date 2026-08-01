@@ -6,8 +6,22 @@
     <link rel="icon" type="image/x-icon" href="/Stitch-DesignSystem/Logo-backfill.ico" />
     <title>Stitch Design System</title>
     <meta name="description" content="Design tokens and component reference for the Stitch tech-pack platform." />
-    <script type="module" crossorigin src="/Stitch-DesignSystem/assets/index-Cl1e8rIL.js"></script>
-    <link rel="stylesheet" crossorigin href="/Stitch-DesignSystem/assets/index-B8ymxIXv.css">
+    <!-- Same FOUC-prevention script as the main app's index.html (design/theme-control.md)
+         — this site embeds the real ThemeControl (DocsLayout), so it needs the same
+         before-first-paint theme application. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("stitch-theme");
+          var dark = stored === "dark" ||
+            ((!stored || stored === "system") &&
+              matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/Stitch-DesignSystem/assets/index-DGmVaiW-.js"></script>
+    <link rel="stylesheet" crossorigin href="/Stitch-DesignSystem/assets/index-DW9QN24M.css">
   </head>
 
   <body>
