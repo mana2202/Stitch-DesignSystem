@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Viora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #fafaf8;
+      --surface: #f3f2ef;
+      --border:  #e8e6e0;
+      --text:    #1a1a1a;
+      --muted:   #6b6960;
+      --accent:  #c8b89a;
+      --sans:    'DM Sans', system-ui, sans-serif;
+      --mono:    'DM Mono', 'Courier New', monospace;
+      --max-w:   720px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(250,250,248,0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px clamp(20px, 5vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-wordmark {
+      font-family: var(--sans);
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-back {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    /* ── Page layout ── */
+    .page {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 48px);
+    }
+
+    /* ── Header ── */
+    .doc-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--sans);
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .doc-meta {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 48px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 48px;
+    }
+
+    /* ── Content ── */
+    h2 {
+      font-family: var(--sans);
+      font-size: clamp(16px, 2vw, 19px);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-family: var(--mono);
+      font-size: 13.5px;
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.85;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    ul li {
+      font-family: var(--mono);
+      font-size: 13.5px;
+      font-weight: 300;
+      color: var(--text);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    strong {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-top: 48px;
+    }
+
+    .contact-box p { margin-bottom: 4px; }
+    .contact-box a { color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+    .contact-box a:hover { color: var(--text); border-color: var(--text); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px clamp(20px, 5vw, 48px);
+      text-align: center;
+    }
+
+    .footer-wordmark {
+      font-family: var(--sans);
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-wordmark">Viora</span>
+    <a href="index.html" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M11.5 7H2.5M6.5 3.5L3 7l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to home
+    </a>
+  </nav>
+
+  <main class="page">
+
+    <p class="doc-label">Legal</p>
+    <h1>Privacy Policy</h1>
+    <div class="doc-meta">
+      <span>Effective Date: June 12, 2026</span>
+      <span>Last Updated: June 12, 2026</span>
+    </div>
+    <div class="divider"></div>
+
+    <p>Viora Retail ("Company," "we," "our," or "us") provides the Stitch platform at https://vioraretail.com/ (the "Service"). This Privacy Policy describes how we collect, use, disclose, and protect information, and outlines your rights regarding your data.</p>
+
+    <h2>1. Scope</h2>
+    <p>This Privacy Policy applies to:</p>
+    <ul>
+      <li>Users of the Service</li>
+      <li>Visitors to our website</li>
+    </ul>
+    <p>This Policy applies solely to information processed by Viora Retail in connection with the Service.</p>
+
+    <h2>2. Information We Collect</h2>
+
+    <h3>2.1 Account Information</h3>
+    <ul>
+      <li>Name</li>
+      <li>Email address</li>
+      <li>Authentication credentials (stored securely in hashed/encrypted form)</li>
+    </ul>
+
+    <h3>2.2 Customer Content ("Customer Data")</h3>
+    <p>Customer Data includes any content uploaded, submitted, or generated through the Service, including:</p>
+    <ul>
+      <li>Tech packs</li>
+      <li>Product specifications</li>
+      <li>Documents, images, and files</li>
+      <li>Notes, annotations, and comments</li>
+    </ul>
+    <p>Customer Data may include confidential and proprietary business information.</p>
+
+    <h3>2.3 Usage Data</h3>
+    <p>We collect limited technical and usage data, including:</p>
+    <ul>
+      <li>IP address</li>
+      <li>Device type and browser type</li>
+      <li>Pages visited and session duration</li>
+    </ul>
+
+    <h3>2.4 Cookies</h3>
+    <p>We use:</p>
+    <ul>
+      <li>Essential cookies (authentication and session management)</li>
+      <li>Analytics cookies</li>
+    </ul>
+
+    <h2>3. Purpose of Processing</h2>
+    <p>We process data solely for the following purposes:</p>
+    <ul>
+      <li>To provide, operate, and maintain the Service</li>
+      <li>To enable document processing, collaboration, and platform functionality</li>
+      <li>To provide customer support</li>
+      <li>To improve system performance, reliability, and usability</li>
+    </ul>
+    <p>We do <strong>not</strong> process Customer Data for unrelated commercial purposes.</p>
+
+    <h2>4. AI &amp; Model Training Restrictions</h2>
+    <p>We <strong>do not use Customer Data to train machine learning or AI models.</strong></p>
+    <ul>
+      <li>Customer Data is not used to train general-purpose models, foundation models, or internal proprietary models</li>
+      <li>Customer Data is used only for inference and feature execution within the Service</li>
+      <li>We do not retain prompts or outputs for model training purposes</li>
+      <li>We do not permit third-party providers to use Customer Data for model training</li>
+    </ul>
+    <p>Any use of aggregated data for service improvement is fully anonymized, de-identified, and not traceable to any customer, design, or dataset.</p>
+
+    <h2>5. Data Ownership &amp; License</h2>
+    <ul>
+      <li>Customers retain all rights, title, and interest in and to Customer Data</li>
+      <li>Viora Retail does not acquire ownership of Customer Data</li>
+    </ul>
+    <p>We are granted a limited, non-exclusive, revocable license to store, process, and transmit Customer Data solely to provide the Service.</p>
+
+    <h2>6. Confidentiality</h2>
+    <p>Customer Data is treated as confidential information. We implement administrative, technical, and organizational safeguards designed to prevent unauthorized access or disclosure, and to protect proprietary and trade secret information.</p>
+    <p>We do not access Customer Data except as necessary to provide the Service, for support requests, or as required by law.</p>
+
+    <h2>7. How We Share Information</h2>
+    <p>We do not sell, rent, or trade Customer Data. We may share information only with trusted service providers to operate the Service, including:</p>
+    <ul>
+      <li>Cloud infrastructure providers</li>
+      <li>File storage providers</li>
+      <li>Email delivery providers</li>
+      <li>AI infrastructure providers for inference</li>
+    </ul>
+    <p>These providers are contractually restricted from using Customer Data for model training or any purpose other than providing services to us.</p>
+
+    <h2>8. Data Retention</h2>
+    <p>We retain data for as long as your account is active, or until deletion is requested. Backup copies may persist for a limited period consistent with standard disaster recovery practices.</p>
+
+    <h2>9. Security</h2>
+    <p>We implement industry-standard security measures, including encryption in transit, access controls, authentication mechanisms, and secure cloud infrastructure. However, no method of transmission or storage is completely secure.</p>
+
+    <h2>10. Your Rights</h2>
+    <p>Depending on your location (including under GDPR and CCPA), you may have the right to:</p>
+    <ul>
+      <li>Access your data</li>
+      <li>Correct inaccurate data</li>
+      <li>Request deletion</li>
+      <li>Request a copy of your data (data portability)</li>
+      <li>Object to or restrict processing</li>
+    </ul>
+    <p>To exercise your rights, contact us at <strong>revia.stitch@gmail.com</strong>. We may require verification before fulfilling requests.</p>
+
+    <h2>11. Account Deletion</h2>
+    <p>You may request account deletion by contacting us. Upon deletion, your data will be removed from active systems. Residual data may remain temporarily in backups.</p>
+
+    <h2>12. International Data Transfers</h2>
+    <p>Data may be processed in the United States and other jurisdictions. By using the Service, you consent to the transfer of your data to countries that may have different data protection laws than your jurisdiction.</p>
+
+    <h2>13. Children's Privacy</h2>
+    <p>The Service is not intended for individuals under the age of 13. We do not knowingly collect personal data from children.</p>
+
+    <h2>14. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Material changes will be communicated by updating the effective date and posting the updated Policy on this page.</p>
+
+    <div class="contact-box">
+      <p><strong>Questions about this policy?</strong></p>
+      <p>Contact us at <a href="mailto:revia.stitch@gmail.com">revia.stitch@gmail.com</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="footer-wordmark">Viora</p>
+    <p class="footer-copy">Protected by Copyright Law 2026</p>
+  </footer>
+
+</body>
+</html>
